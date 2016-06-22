@@ -19,4 +19,4 @@ I am building a timer web application using
   9. As a user, when the break button is enabled I can click it.
   10. As a user, when I click the break button, the timer sets to 5 minutes and begins counting down.
   11. As a user, whenever I click the pause button the timer stops.
-  12. As a user, when I click the pause button again, it starts the timer once more. 
+  12. As a user, when I click the pause button again, it starts the timer once more.

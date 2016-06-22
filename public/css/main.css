@@ -1,0 +1,17 @@
+body {
+  padding-top: 70px;
+}
+
+#timer {
+  font-size: 300px;
+  text-align: center;
+}
+
+#start {
+  font-size: 70px
+}
+
+#break {
+  margin-top: 30px;
+  font-size: 30px;
+}
