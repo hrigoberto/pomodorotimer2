@@ -14,18 +14,26 @@ $(document).ready(function(){
   function startPause(){
     $pause.addClass('disabled');
     $pause.attr('disabled');
+    $start.removeClass('disabled');
+    $start.removeAttr('disabled');
     clearInterval(countdown);
   }
 
   function startBreak(){
+    clearInterval(countdown);
     $minutes.text('05');
     $seconds.text('00');
+    $breakBtn.addClass('disabled');
+    $breakBtn.attr('disabled');
+    $start.addClass('disabled');
+    $start.attr('disabled');
     startCountdown();
   }
 
   function startCountdown(){
     $pause.removeClass('disabled');
     $pause.removeAttr('disabled');
+    $start.addClass('disabled');
      countdown = setInterval(function(){
       var secondsVal = +$seconds.text();
       var minutesVal = +$minutes.text();
