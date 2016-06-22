@@ -4,6 +4,7 @@ $(document).ready(function(){
   var $pause = $('#pause');
   var $minutes = $('#minutes');
   var $seconds = $('#seconds');
+  var $ding = document.getElementById('ding');
   var countdown;
 
   $start.on('click', startCountdown);
@@ -33,6 +34,7 @@ $(document).ready(function(){
           $breakBtn.removeAttr('disabled');
           $pause.addClass('disabled');
           $pause.attr('disabled');
+          $ding.play();
           clearInterval(countdown);
           return;
         }
