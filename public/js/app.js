@@ -4,13 +4,16 @@ $(document).ready(function(){
   var $pause = $('#pause');
   var $minutes = $('#minutes');
   var $seconds = $('#seconds');
+  var countdown;
 
   $start.on('click', startCountdown);
   $breakBtn.on('click', startBreak);
   $pause.on('click', startPause);
 
   function startPause(){
-
+    $pause.addClass('disabled');
+    $pause.attr('disabled');
+    clearInterval(countdown);
   }
 
   function startBreak(){
@@ -20,16 +23,16 @@ $(document).ready(function(){
   }
 
   function startCountdown(){
-    var countdown = setInterval(function(){
+    $pause.removeClass('disabled');
+    $pause.removeAttr('disabled');
+     countdown = setInterval(function(){
       var secondsVal = +$seconds.text();
       var minutesVal = +$minutes.text();
-        $pause.removeClass('disabled');
-        $pause.removeAttr('disabled');
         if(secondsVal === 0 && minutesVal === 0){
           $breakBtn.removeClass('disabled');
           $breakBtn.removeAttr('disabled');
           $pause.addClass('disabled');
-          $pause.addAttr('disabled');
+          $pause.attr('disabled');
           clearInterval(countdown);
           return;
         }
