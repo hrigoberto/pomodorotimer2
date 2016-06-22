@@ -5,11 +5,26 @@ $(document).ready(function(){
   var $minutes = $('#minutes');
   var $seconds = $('#seconds');
   var $ding = document.getElementById('ding');
+  var $reset = $('#reset');
   var countdown;
+
 
   $start.on('click', startCountdown);
   $breakBtn.on('click', startBreak);
   $pause.on('click', startPause);
+  $reset.on('click', resetTimer);
+
+  function resetTimer(){
+    clearInterval(countdown);
+    $minutes.text('25');
+    $seconds.text('00');
+    $start.removeClass('disabled');
+    $start.removeAttr('disabled');
+    $pause.addClass('disabled');
+    $pause.attr('disabled');
+    $reset.addClass('disabled');
+    $reset.attr('disabled');
+  }
 
   function startPause(){
     $pause.addClass('disabled');
@@ -33,6 +48,8 @@ $(document).ready(function(){
   function startCountdown(){
     $pause.removeClass('disabled');
     $pause.removeAttr('disabled');
+    $reset.removeClass('disabled');
+    $reset.removeAttr('disabled');
     $start.addClass('disabled');
     $start.attr('disabled');
      countdown = setInterval(function(){
