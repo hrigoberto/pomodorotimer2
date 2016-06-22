@@ -34,6 +34,7 @@ $(document).ready(function(){
     $pause.removeClass('disabled');
     $pause.removeAttr('disabled');
     $start.addClass('disabled');
+    $start.attr('disabled');
      countdown = setInterval(function(){
       var secondsVal = +$seconds.text();
       var minutesVal = +$minutes.text();
@@ -42,6 +43,8 @@ $(document).ready(function(){
           $breakBtn.removeAttr('disabled');
           $pause.addClass('disabled');
           $pause.attr('disabled');
+          $start.removeClass('disabled');
+          $start.removeAttr('disabled');
           $ding.play();
           clearInterval(countdown);
           return;
