@@ -36,8 +36,8 @@ $(document).ready(function(){
 
   function startBreak(){
     clearInterval(countdown);
-    $minutes.text('05');
-    $seconds.text('00');
+    $minutes.text('00');
+    $seconds.text('04');
     $breakBtn.addClass('disabled');
     $breakBtn.attr('disabled');
     $start.addClass('disabled');
