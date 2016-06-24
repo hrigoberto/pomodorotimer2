@@ -19,7 +19,7 @@ $(document).ready(function(){
     $minutes.text('25');
     $seconds.text('00');
     $start.removeClass('disabled');
-    $start.removeAttr('disabled');
+    $start.removeAttr('disabled', true);
     $pause.addClass('disabled');
     $pause.attr('disabled');
     $reset.addClass('disabled');
@@ -30,7 +30,7 @@ $(document).ready(function(){
     $pause.addClass('disabled');
     $pause.attr('disabled');
     $start.removeClass('disabled');
-    $start.removeAttr('disabled');
+    $start.removeAttr('disabled', true);
     clearInterval(countdown);
   }
 
@@ -39,9 +39,9 @@ $(document).ready(function(){
     $minutes.text('00');
     $seconds.text('04');
     $breakBtn.addClass('disabled');
-    $breakBtn.attr('disabled');
+    $breakBtn.attr('disabled', true);
     $start.addClass('disabled');
-    $start.attr('disabled');
+    $start.attr('disabled', true);
     startCountdown();
   }
 
@@ -50,8 +50,8 @@ $(document).ready(function(){
     $pause.removeAttr('disabled');
     $reset.removeClass('disabled');
     $reset.removeAttr('disabled');
-    $start.addClass('disabled');
-    $start.attr('disabled');
+    $start.addClass('disabled', true);
+    $start.attr('disabled', true);
      countdown = setInterval(function(){
       var secondsVal = +$seconds.text();
       var minutesVal = +$minutes.text();
@@ -61,7 +61,7 @@ $(document).ready(function(){
           $pause.addClass('disabled');
           $pause.attr('disabled');
           $start.removeClass('disabled');
-          $start.removeAttr('disabled');
+          $start.removeAttr('disabled', true);
           $ding.play();
           clearInterval(countdown);
           return;
