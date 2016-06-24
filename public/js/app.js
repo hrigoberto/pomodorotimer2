@@ -24,6 +24,8 @@ $(document).ready(function(){
     $pause.attr('disabled');
     $reset.addClass('disabled');
     $reset.attr('disabled');
+    $breakBtn.attr('disabled',true);
+    $breakBtn.addClass('disabled');
   }
 
   function startPause(){
