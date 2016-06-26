@@ -6,6 +6,8 @@ $(document).ready(function(){
   var $seconds = $('#seconds');
   var $ding = document.getElementById('ding');
   var $reset = $('#reset');
+  var $plus = $('#Plus');
+  var $minus = $('#Minus');
   var countdown;
 
 
@@ -13,6 +15,19 @@ $(document).ready(function(){
   $breakBtn.on('click', startBreak);
   $pause.on('click', startPause);
   $reset.on('click', resetTimer);
+  $minus.on('click', minusOne);
+  $plus.on('click', plusOne);
+
+  function minusOne(){
+    var minutesVal = +$minutes.text();
+    $minutes.text(minutesVal - 1);
+  };
+
+
+  function plusOne(){
+    var minutesVal = +$minutes.text();
+    $minutes.text(minutesVal + 1);
+  }
 
   function resetTimer(){
     clearInterval(countdown);

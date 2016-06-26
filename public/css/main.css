@@ -1,4 +1,13 @@
+.container {
+  background-color: #5b8fba;
+}
+
+html {
+  background-color: #5b8fba;
+}
+
 body {
+  background-color: #5b8fba;
   padding-top: 30px;
 }
 
